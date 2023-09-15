@@ -16,7 +16,7 @@ import java.io.IOException;
  * 爬csdn博客工具
  * create by zhangtao
  */
-public class ClimbUtil {
+public class DownCSDNUtil {
     public static void main(String[] args) {
         //        爬所有
         // climb("qq_45774645");
@@ -74,9 +74,20 @@ public class ClimbUtil {
         climbDetailById(baseUrl, articleId);
         System.out.println("》》》》》》》爬虫结束《《《《《《《");
     }
+
+
+    public static void climbDetailByUrls(String... urls){
+
+        for (String url : urls) {
+            climbDetailByUrl(url);
+        }
+    }
+
+
     public static void climbDetailByUrl(String csdnUrl) {
         climbDetailByUrl(csdnUrl,null);
     }
+
 
     public static void climbDetailByUrl(String csdnUrl,String fileName) {
         File file = new File("./_posts/");
@@ -123,7 +134,7 @@ public class ClimbUtil {
 
         // 设置jekyll格式博客date
         String jekyllDate = "date:   " + time + "\n";
-        String md = Html2Md.getMarkDownText(htmlElement);
+        String md = Html2MD.getMarkDownText(htmlElement);
         // String md = HtmlToMd.getTextContent(htmlElement); 转出来的效果不满意，弃用
 
         System.out.println(md);
@@ -173,7 +184,7 @@ public class ClimbUtil {
 
         // 设置jekyll格式博客date
         String jekyllDate = "date:   " + time + "\n";
-        String md = Html2Md.getMarkDownText(htmlElement);
+        String md = Html2MD.getMarkDownText(htmlElement);
         // String md = HtmlToMd.getTextContent(htmlElement); 转出来的效果不满意，弃用
 
         System.out.println(md);

@@ -2,7 +2,6 @@ package com.cc.down177;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.URLUtil;
-import cn.hutool.http.HttpUtil;
 import lombok.SneakyThrows;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -11,16 +10,14 @@ import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
  * HTML转MD工具类
  * create by zhangtao
  */
-public class Html2Md {
-    private Html2Md() {
+public class Html2MD {
+    private Html2MD() {
     }
 
     public static String getMarkDownText(String html) {
