@@ -18,11 +18,12 @@ import java.io.IOException;
  */
 public class DownCSDNUtil {
     public static void main(String[] args) {
+
         //        爬所有
         // climb("qq_45774645");
 //        爬单个
        // climbOne("unique_perfect","109380996");
-        climbDetailByUrl("https://blog.csdn.net/weixin_67276852/article/details/124159843", "IntelliJIDEA快捷键大全动图演示");
+        climbDetailByUrl("https://blog.csdn.net/GoodburghCottage/article/details/128169907", "Gradle及IDEA设置");
     }
 
     public static void climb(String userName) {
@@ -136,7 +137,7 @@ public class DownCSDNUtil {
         String jekyllDate = "date:   " + time + "\n";
         String md = Html2MD.getMarkDownText(htmlElement);
         // String md = HtmlToMd.getTextContent(htmlElement); 转出来的效果不满意，弃用
-
+        md =  "> 转载："+csdnUrl+"".concat(md);
         System.out.println(md);
 
         String jekylltr = "---\n" + "layout:  post\n" + jekyllTitle + jekyllDate
