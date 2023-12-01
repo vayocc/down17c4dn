@@ -23,7 +23,7 @@ public class DownCSDNUtil {
         // climb("qq_45774645");
 //        爬单个
        // climbOne("unique_perfect","109380996");
-        climbDetailByUrl("https://blog.csdn.net/GoodburghCottage/article/details/128169907", "Gradle及IDEA设置");
+        climbDetailByUrl("https://blog.csdn.net/qq_27022241/article/details/108405545", "WIN10环境Maven的安装与配置并修改.m2下setting配置文件");
     }
 
     public static void climb(String userName) {
